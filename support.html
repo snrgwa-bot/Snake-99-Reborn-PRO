@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Snake 99 Reborn Pro</title>
+    <meta name="description" content="Get help with Snake 99 Reborn Pro. FAQ, troubleshooting, and contact support.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #4ade80;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #4ade80;
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+        }
+        h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+            color: #ccc;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4ade80;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Contact Card */
+        .contact-card {
+            background: rgba(74, 222, 128, 0.1);
+            border: 1px solid rgba(74, 222, 128, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .contact-card h3 {
+            color: #4ade80;
+            margin-bottom: 15px;
+        }
+        .contact-card a {
+            display: inline-block;
+            background: #4ade80;
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        .contact-card a:hover {
+            background: #22c55e;
+            transform: translateY(-2px);
+        }
+        
+        /* FAQ Accordion */
+        .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .faq-question h4 {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .faq-question .icon {
+            color: #4ade80;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        .faq-answer {
+            padding: 0 20px 20px 20px;
+            color: #aaa;
+            display: none;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .faq-item.active .faq-question .icon {
+            transform: rotate(45deg);
+        }
+        
+        /* Quick Links */
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .quick-link {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .quick-link:hover {
+            border-color: rgba(74, 222, 128, 0.3);
+            transform: translateY(-3px);
+        }
+        .quick-link .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .quick-link h4 {
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        .quick-link p {
+            color: #888;
+            font-size: 0.85rem;
+            margin: 0;
+        }
+        
+        /* Highlight Box */
+        .highlight {
+            background: rgba(74, 222, 128, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #4ade80;
+            margin: 20px 0;
+        }
+        .warning {
+            background: rgba(251, 191, 36, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #fbbf24;
+            margin: 20px 0;
+        }
+        .warning p {
+            color: #fbbf24;
+        }
+        
+        /* Version Info */
+        .version-info {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .version-info table {
+            width: 100%;
+        }
+        .version-info td {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .version-info td:first-child {
+            color: #888;
+        }
+        .version-info td:last-child {
+            color: #fff;
+            text-align: right;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #666;
+        }
+        footer a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        footer a:hover {
+            color: #4ade80;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <h1>🛠️ Support Center</h1>
+        <p class="subtitle">Snake 99 Reborn Pro - Help & FAQ</p>
+        
+        <!-- Quick Contact -->
+        <div class="contact-card">
+            <h3>Need Help?</h3>
+            <p>Can't find what you're looking for? We're here to help!</p>
+            <a href="mailto:snrgwa@gmail.com?subject=Snake%2099%20Reborn%20Pro%20Support">📧 Contact Support</a>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="#faq" class="quick-link">
+                <div class="icon">❓</div>
+                <h4>FAQ</h4>
+                <p>Common questions</p>
+            </a>
+            <a href="#gameplay" class="quick-link">
+                <div class="icon">🎮</div>
+                <h4>Gameplay</h4>
+                <p>How to play</p>
+            </a>
+            <a href="#purchases" class="quick-link">
+                <div class="icon">💳</div>
+                <h4>Purchases</h4>
+                <p>Billing & subscriptions</p>
+            </a>
+            <a href="#troubleshooting" class="quick-link">
+                <div class="icon">🔧</div>
+                <h4>Troubleshooting</h4>
+                <p>Fix common issues</p>
+            </a>
+        </div>
+        
+        <!-- FAQ Section -->
+        <h2 id="faq">❓ Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <h4>How do I control the snake?</h4>
+                <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>You can control the snake using either <strong>swipe gestures</strong> or <strong>on-screen buttons</strong>:</p>
+                <ul>
+                    <li><strong>Swipe:</strong> Swipe in the dedicated zone below the game board</li>
+                    <li><strong>Buttons:</strong> Tap the arrow buttons to change direction</li>
+                </ul>
+                <p>Switch between control methods in Settings → Game Settings → Control Method.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <h4>How do lives work?</h4>
+                <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>You start with <strong>5 lives</strong>. Here's how the system works:</p>
+                <ul>
+                    <li>Lose a life when you hit a wall or your own tail</li>
+                    <li>Lives regenerate automatically - 1 life every 30 minutes</li>
+                    <li>Earn <strong>+1 bonus life</strong> every 25 apples collected</li>
+                    <li>Watch an ad to get a free life instantly</li>
+                    <li>Or subscribe for unlimited lives!</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <h4>How do I advance to the next level?</h4>
+                <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Collect <strong>50 apples</strong> to complete each level. After completing a level:</p>
+                <ul>
+                    <li>A celebration screen appears</li>
+                    <li>You automatically advance to the next level</li>
+                    <li>The snake's speed increases!</li>
+                </ul>
+                <p>There are 99 levels total. Can you beat them all?</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <h4>Is my progress saved?</h4>
+                <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Yes! Your game automatically saves when:</p>
+                <ul>
+                    <li>You pause the game</li>
+                    <li>You leave the app</li>
+                    <li>You receive a phone call</li>
+                </ul>
+                <p>When you return, you'll see a "Continue Game" button to resume exactly where you left off.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <h4>How do leaderboards work?</h4>
+                <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Snake 99 Reborn Pro uses <strong>Game Center</strong> for leaderboards:</p>
+                <ul>
+                    <li><strong>High Score:</strong> Compete for the highest total score</li>
+                    <li><strong>Highest Level:</strong> See who reached the highest level</li>
+                </ul>
+                <p>Make sure you're signed into Game Center to appear on leaderboards. Tap the trophy icon to view rankings!</p>
+            </div>
+        </div>
+        
+        <!-- Gameplay Section -->
+        <h2 id="gameplay">🎮 Gameplay Guide</h2>
+        
+        <h3>Objective</h3>
+        <p>Guide your snake to eat apples and grow longer. Collect 50 apples per level to advance. Avoid hitting walls and your own tail!</p>
+        
+        <h3>Controls</h3>
+        <p>Choose your preferred control method in Settings:</p>
+        <ul>
+            <li><strong>Swipe Controls:</strong> Swipe up, down, left, or right in the swipe zone</li>
+            <li><strong>Button Controls:</strong> Tap arrow buttons (adjustable size: Small, Medium, Large)</li>
+        </ul>
+        
+        <h3>Scoring</h3>
+        <ul>
+            <li>Each apple = Points based on current level</li>
+            <li>Higher levels = More points per apple</li>
+            <li>Bonus life every 25 apples collected</li>
+        </ul>
+        
+        <h3>Tips & Tricks</h3>
+        <div class="highlight">
+            <ul>
+                <li>🐍 Plan your path - don't trap yourself in corners</li>
+                <li>🍎 Collect apples efficiently to earn bonus lives</li>
+                <li>⚡ Higher levels are faster - stay focused!</li>
+                <li>⏸️ Use pause if you need a break</li>
+                <li>🎯 Practice makes perfect - you'll improve over time!</li>
+            </ul>
+        </div>
+        
+        <!-- Purchases Section -->
+        <h2 id="purchases">💳 Purchases & Subscriptions</h2>
+        
+        <h3>Premium Options</h3>
+        <ul>
+            <li><strong>Monthly Subscription ($0.99/month):</strong> Unlimited lives, auto-renews monthly</li>
+            <li><strong>Lifetime Purchase ($5.99):</strong> Unlimited lives forever, one-time payment</li>
+        </ul>
+        
+        <h3>How to Subscribe</h3>
+        <ol>
+            <li>Open the app and tap Settings (gear icon)</li>
+            <li>Tap "Get Unlimited Lives"</li>
+            <li>Choose Monthly or Lifetime</li>
+            <li>Confirm purchase with Face ID, Touch ID, or password</li>
+        </ol>
+        
+        <h3>Managing Subscriptions</h3>
+        <p>To cancel or manage your subscription:</p>
+        <ol>
+            <li>Open iPhone <strong>Settings</strong></li>
+            <li>Tap your <strong>Apple ID</strong> at the top</li>
+            <li>Tap <strong>Subscriptions</strong></li>
+            <li>Find <strong>Snake 99 Reborn Pro</strong></li>
+            <li>Tap <strong>Cancel Subscription</strong></li>
+        </ol>
+        
+        <div class="warning">
+            <p><strong>Note:</strong> Subscriptions auto-renew unless cancelled at least 24 hours before the end of the current period.</p>
+        </div>
+        
+        <h3>Restore Purchases</h3>
+        <p>If you've purchased premium and it's not showing:</p>
+        <ol>
+            <li>Open the app</li>
+            <li>Go to Settings → "Get Unlimited Lives"</li>
+            <li>Tap "Restore Purchases" at the bottom</li>
+            <li>Your purchase will be restored automatically</li>
+        </ol>
+        
+        <h3>Refunds</h3>
+        <p>All purchases are processed by Apple. To request a refund:</p>
+        <ol>
+            <li>Go to <a href="https://reportaproblem.apple.com" style="color: #4ade80;">reportaproblem.apple.com</a></li>
+            <li>Sign in with your Apple ID</li>
+            <li>Find the purchase and request a refund</li>
+        </ol>
+        
+        <!-- Troubleshooting Section -->
+        <h2 id="troubleshooting">🔧 Troubleshooting</h2>
+        
+        <h3>App won't open / crashes</h3>
+        <ol>
+            <li>Force close the app and reopen</li>
+            <li>Restart your iPhone</li>
+            <li>Check for app updates in the App Store</li>
+            <li>Delete and reinstall the app (progress may be lost)</li>
+        </ol>
+        
+        <h3>Purchase not working</h3>
+        <ol>
+            <li>Check your internet connection</li>
+            <li>Make sure you're signed into your Apple ID</li>
+            <li>Try "Restore Purchases" in the app</li>
+            <li>Restart the app and try again</li>
+            <li>Contact Apple Support if issues persist</li>
+        </ol>
+        
+        <h3>Game Center not working</h3>
+        <ol>
+            <li>Open iPhone Settings → Game Center</li>
+            <li>Make sure Game Center is enabled</li>
+            <li>Sign out and sign back in</li>
+            <li>Restart the app</li>
+        </ol>
+        
+        <h3>Controls not responding</h3>
+        <ul>
+            <li>Make sure you're swiping/tapping in the correct area</li>
+            <li>Try switching between Swipe and Button controls in Settings</li>
+            <li>If using buttons, try increasing the button size</li>
+        </ul>
+        
+        <h3>Lost progress</h3>
+        <p>Game progress is stored locally on your device. Unfortunately, if you delete the app or switch devices, progress cannot be recovered. High scores submitted to Game Center are preserved.</p>
+        
+        <!-- App Info -->
+        <h2>📱 App Information</h2>
+        
+        <div class="version-info">
+            <table>
+                <tr>
+                    <td>App Name</td>
+                    <td>Snake 99 Reborn Pro</td>
+                </tr>
+                <tr>
+                    <td>Version</td>
+                    <td>1.0</td>
+                </tr>
+                <tr>
+                    <td>Requires</td>
+                    <td>iOS 17.0 or later</td>
+                </tr>
+                <tr>
+                    <td>Developer</td>
+                    <td>SNRGWA</td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td>snrgwa@gmail.com</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- Contact Section -->
+        <h2>📧 Contact Us</h2>
+        
+        <p>Still need help? We'd love to hear from you!</p>
+        
+        <div class="contact-card">
+            <h3>Email Support</h3>
+            <p>We typically respond within 24-48 hours.</p>
+            <a href="mailto:snrgwa@gmail.com?subject=Snake%2099%20Reborn%20Pro%20Support">📧 snrgwa@gmail.com</a>
+        </div>
+        
+        <p>When contacting support, please include:</p>
+        <ul>
+            <li>Your device model (e.g., iPhone 15 Pro)</li>
+            <li>iOS version (e.g., iOS 17.2)</li>
+            <li>App version (found in Settings)</li>
+            <li>Description of the issue</li>
+            <li>Screenshots if applicable</li>
+        </ul>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div style="margin-bottom: 20px;">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
+        <p>© 2025 Snake 99 Reborn Pro. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
